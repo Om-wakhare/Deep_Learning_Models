@@ -1,11 +1,12 @@
 # Deep Learning Case Studies
 
 ## Project Overview
-This repository contains comprehensive deep learning case studies demonstrating various AI/ML techniques including Convolutional Neural Networks (CNNs) for image classification and Large Language Models (LLMs) for text processing. Each case study is implemented as a standalone application with professional documentation and industrial standards.
+This repository contains comprehensive deep learning case studies demonstrating various AI/ML techniques including Convolutional Neural Networks (CNNs) for image classification, Large Language Models (LLMs) for text processing, and handwritten digit recognition. Each case study is implemented as a standalone application with professional documentation and industrial standards.
 
 ## 🚀 Features
 - **Real-time Image Classification**: MobileNetV2-based CNN for live webcam classification
 - **Advanced Text Processing**: FLAN-T5 model for summarization and Q&A
+- **MNIST Digit Recognition**: Complete CNN pipeline for handwritten digit classification
 - **Model Caching**: Intelligent caching systems for optimal performance
 - **Professional Documentation**: Industrial-standard README files for each component
 - **Modular Architecture**: Independent, well-documented modules
@@ -26,6 +27,11 @@ Dl_casestudies/
 │   ├── flan_model.joblib            # Cached model
 │   ├── flan_tokenizer.joblib        # Cached tokenizer
 │   └── README.md                    # Documentation
+├── MNIST Handwritten Digit Recognition/  # MNIST digit classification
+│   ├── MNIST_CNN.py                 # Main application
+│   ├── mnist_cnn_model.h5           # Trained model (auto-generated)
+│   ├── training_history.joblib      # Training history (auto-generated)
+│   └── README.md                    # Documentation
 ├── requirements.txt                  # Project dependencies
 └── README.md                        # This file
 ```
@@ -41,7 +47,7 @@ Dl_casestudies/
 ### Quick Start
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Om-wakhare/Deep_Learning_Models.git
    cd Dl_casestudies
    ```
 
@@ -63,6 +69,10 @@ Dl_casestudies/
    # Text Processing
    cd "../HuggingFace LLM"
    python FLAN_T5.py
+   
+   # MNIST Digit Recognition
+   cd "../MNIST Handwritten Digit Recognition"
+   python MNIST_CNN.py
    ```
 
 ## 📊 Case Studies
@@ -118,19 +128,39 @@ cd "HuggingFace LLM"
 python FLAN_T5.py
 ```
 
+### 4. MNIST Handwritten Digit Recognition
+**Location**: `MNIST Handwritten Digit Recognition/`
+
+**Description**: Complete CNN pipeline for MNIST handwritten digit recognition including training, evaluation, and prediction capabilities.
+
+**Key Features**:
+- Custom CNN architecture
+- Data augmentation
+- Model training and evaluation
+- Comprehensive visualizations
+- Model persistence
+
+**Usage**:
+```bash
+cd "MNIST Handwritten Digit Recognition"
+python MNIST_CNN.py
+```
+
 ## 🔧 Technical Specifications
 
 ### Dependencies
 - **Core**: NumPy, OpenCV, TensorFlow
 - **NLP**: Transformers, PyTorch, Tokenizers
-- **Utilities**: Joblib, Pillow, Matplotlib
+- **Visualization**: Matplotlib, Seaborn
+- **Utilities**: Joblib, Pillow, Scikit-learn
 - **Development**: Jupyter, IPython
 
 ### Performance Metrics
 - **CNN Applications**: ~30 FPS processing
 - **LLM Applications**: ~2-5 seconds per request
-- **Model Sizes**: 14MB (CNN), 300MB (LLM)
-- **Memory Usage**: 200MB-2GB depending on application
+- **MNIST Training**: ~30-60 minutes (CPU), ~5-15 minutes (GPU)
+- **Model Sizes**: 14MB (CNN), 300MB (LLM), 2-5MB (MNIST)
+- **Memory Usage**: 200MB-4GB depending on application
 
 ## 📚 Documentation
 
@@ -155,6 +185,12 @@ Each case study includes comprehensive documentation:
 - **Research**: Document analysis and processing
 - **Education**: Interactive learning tools
 
+### Handwritten Digit Recognition
+- **Document Processing**: Automated digit extraction
+- **Educational**: Learning CNN fundamentals
+- **Research**: Computer vision experiments
+- **Prototyping**: OCR system development
+
 ## 🚀 Getting Started
 
 ### For Image Classification
@@ -169,10 +205,16 @@ Each case study includes comprehensive documentation:
 3. For Q&A: Create `context.txt` with your content
 4. Process text or ask questions
 
+### For MNIST Recognition
+1. Run the MNIST application
+2. Wait for model training to complete
+3. View training progress and results
+4. Use trained model for predictions
+
 ## 🔍 Advanced Features
 
 ### Model Caching
-- **Automatic Caching**: Models cached after first download
+- **Automatic Caching**: Models cached after first download/training
 - **Performance Optimization**: Faster startup times
 - **Error Recovery**: Automatic fallback mechanisms
 
@@ -219,6 +261,8 @@ For issues and questions:
 - [ ] Performance monitoring tools
 - [ ] Automated testing suite
 - [ ] Cloud deployment guides
+- [ ] Real-time webcam digit recognition
+- [ ] Custom dataset support
 
 ## 📈 Version History
 
